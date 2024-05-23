@@ -1,0 +1,22 @@
+@import url(./index.html);
+@import url(./style.css);
+
+:root{
+   --maingEng-font:"Binggrae";
+   --maingKor-font:"binggrae";
+   --bold-font:"Binggrae";
+
+   --mainColor:#ed4044;
+   --subColor:#16a2d5;
+
+   --white:#fff;
+   --black:#000;
+   --black100:#222;
+
+   --nav-gap:40px;
+   --gnb-gap:12px;
+
+   font-family: var(--mainEng-font);
+
+   body{color:var(--black100)}
+}
