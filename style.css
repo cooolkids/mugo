@@ -21,7 +21,8 @@ header {
     background: var(--white);
     position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: 9999;
+    font-family: var(--maingKor-font);
 }
 
 header::after {
@@ -32,11 +33,10 @@ header::after {
     content: '';
     background: url(./images/menu-bg-pattern.png);
     z-index: -1;
-
 }
 
 .header-inner {
-    width: calc(100% - 140px);
+    width: 100%;
     position: relative;
     height: 95px;
     margin: auto;
@@ -46,12 +46,13 @@ header::after {
 
 h1 img {
     width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    padding-left: 20px;
 }
 
-ul.gnb {
-    justify-content: space-between;
-    width: 200px;
-}
 
 nav,
 .gnb {
@@ -86,7 +87,7 @@ nav ul li.main-menu a {
 
 
 nav ul li.main-menu:hover .menu-inner {
-    top: -16px
+    top: -20px
 }
 
 nav ul li.main-menu:hover::before {
@@ -104,6 +105,12 @@ nav ul li.main-menu:hover span {
     color: #ed4043;
 }
 
+
+ul.gnb {
+    width: 220px;
+    padding-left: 40px;
+    gap: 20px;
+}
 
 nav a {
     font-size: 14px;
@@ -146,7 +153,6 @@ nav ul {
     justify-content: space-between;
     position: relative;
     bottom: 5px;
-
 }
 
 nav ul li.main-menu span {
@@ -155,6 +161,64 @@ nav ul li.main-menu span {
 }
 
 
+#sect1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/book-multi-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#sect1 h2 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 23%;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-wrap {
+    width: 90%;
+    position: absolute;
+    gap: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title1,
+.title2,
+.title3 {
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
+    z-index: 999;
+    line-height: 40px;
+    background: #ed4043;
+    border-radius: 100%;
+    font-size: 16px;
+}
+
+.title-wrap h3 {
+    font-size: 20px;
+}
+
+.title1:hover,
+.title3:hover,
+.title2:hover {
+    transform: scale(1.1);
+    transition: .35s;
+}
+
 
 
 section {
@@ -162,8 +226,6 @@ section {
     width: 100%;
     position: relative;
 }
-
-
 
 .character {
     position: relative;
@@ -223,18 +285,18 @@ article h2 {
     padding: 20px;
 }
 
-h3 {
-    font-size: 32px;
+#sect2 h3 {
+    font-size: 28px;
     width: 100%;
     position: absolute;
     z-index: 99;
     text-align: center;
     left: 50%;
-    top: 25%;
+    top: 27%;
     transform: translate(-50%, -50%);
 }
 
-h3 b {
+#sect2 h3 b {
     font-size: 45px;
 }
 
@@ -245,9 +307,45 @@ h3 b {
     font-size: 16px;
 }
 
+.quick {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 6%;
+    bottom: 7%;
+    z-index: 99;
+    cursor: pointer;
+}
 
+.rotate img {
+    width: 100%;
+}
 
-figure {
+.quicktxt {
+    font-size: 12px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(237, 64, 67);
+    border-radius: 50%;
+}
+
+.quicktxt p {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.quick:hover .rotate {
+    transform: rotate(360deg);
+}
+
+#sect2 figure {
     width: 50%;
     height: 100%;
     display: flex;
@@ -256,7 +354,7 @@ figure {
     justify-content: center;
 }
 
-figure img {
+#sect2 figure img {
     width: 15vw;
     position: relative;
     z-index: 10;
@@ -376,11 +474,11 @@ article:nth-child(6) img {
     }
 }
 
-#sect1 article.on figcaption {
+#sect2 article.on figcaption {
     transform: translateY(0%);
 }
 
-figcaption {
+#sect2 figcaption {
     position: absolute;
     /* top: 50%; */
     font-size: 10vw;
@@ -462,4 +560,91 @@ figcaption {
 
 #rok figure {
     background: #404475;
+}
+
+#sect3 {
+    overflow: hidden;
+    width: 100%;
+    height: 110vh;
+    background-image: url(./images/video-bg-pattern.jpg);
+}
+
+#sect3 h3.tryt {
+    font-size: 40px;
+    height: 7vw;
+    position: relative;
+    top: 40px;
+}
+
+.sect3-wrap {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tabs {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
+}
+
+.tab-menu {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 999;
+    padding: 20px;
+    background-image: url(./images/video-tabs-line.png);
+}
+
+.tab-menu ul {
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-menu li.on{
+    color: #ffae08;
+}
+
+.item-tab figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-contents {
+    width: 90%;
+}
+
+.tab-contents img {
+    width: 100%;
+}
+
+.item-tab figure img {
+    width: 40%;
+    padding: 90px;
+}
+
+.item-tab figure figcaption {
+    width: 45%;
+}
+
+.item-tab h3{
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.item-tab p{
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.item-tab {
+    display: none;
+}
+
+.item-tab.on {
+    display: block;
 }
